@@ -1,6 +1,6 @@
 if __name__ == "__main__":
     '''
-    Adding the answers.txt to guesses.txt means that guesses includes EVERY word from the start instead of just the uncommon
+    Adding answers.txt to guesses.txt means that guesses.txt includes EVERY word instead of just the uncommon ones
     '''
     answers = open("answers.txt", "r")
     guesses = open("guesses.txt", "a")
