@@ -48,7 +48,7 @@ def game() -> None:
         addToDict(char, answer_letters)
 
     # Start of guessing loop
-    print('Make a guess:\n' + answer)
+    print('Make a guess:\n')
     while tries < MAX_TRIES:
         # Per loop initialization and iteration (tries)
         tries += 1
