@@ -32,7 +32,7 @@ def game():
         if guess == answer:
             print(f'\nYou got it in {tries} tries! The word was {answer.upper()}.\n')
             return()
-        elif tries >= 6:
+        elif tries >= MAX_TRIES:
             print(f'\nSorry, the word was {answer.upper()}.\n')
             return()
 
@@ -57,8 +57,6 @@ if __name__ == "__main__":
    
     guesses_list = readFile(GUESSES)
     answers_list = readFile(ANSWERS)
-
-    guesses_list += answers_list
 
     game()
     new_game = input("Play new game? (y/n): ")
