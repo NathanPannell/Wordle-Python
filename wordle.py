@@ -3,7 +3,7 @@ import random, os
 MAX_TRIES = 6
 YES = "🟩"
 IN = "🟨"
-NO = "⬜"
+NO = "⬛"
 GUESSES = "guesses.txt"
 ANSWERS = "answers.txt"
 
@@ -15,10 +15,11 @@ def game():
     answer_letters = []
     for i in range(5):
         answer_letters.append(answer[i])
+    print("Make a guess:\n")
 
     while tries < MAX_TRIES:
         tries += 1
-        guess = getInput(f"a")
+        guess = getInput(f"").lower()
         
         # Analyze guess
         for i in range(5):
@@ -31,10 +32,10 @@ def game():
         print()
 
         if guess == answer:
-            print(f'You got it, the word was {answer.capitalize()}')
+            print(f'You got it in {tries} tries! The word was {answer.upper()}.\n')
             return()
         elif tries >= 6:
-            print(f'Sorry, the word was {answer.capitalize()}')
+            print(f'Sorry, the word was {answer.upper()}.\n')
             return()
 
 def getInput(message):
