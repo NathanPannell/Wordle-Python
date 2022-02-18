@@ -1,4 +1,4 @@
-import random, os
+import random
 
 MAX_TRIES = 6
 YES = "🟩"
@@ -6,8 +6,6 @@ IN = "🟨"
 NO = "⬛"
 GUESSES = "guesses.txt"
 ANSWERS = "answers.txt"
-
-os.chdir("C:\\Users\\Nate's Zenbook\\Documents\\Old Schoolwork\\Fall 2021\\CSC 110\\wordle")
 
 def game():
     tries = 0
@@ -32,10 +30,10 @@ def game():
         print()
 
         if guess == answer:
-            print(f'You got it in {tries} tries! The word was {answer.upper()}.\n')
+            print(f'\nYou got it in {tries} tries! The word was {answer.upper()}.\n')
             return()
         elif tries >= 6:
-            print(f'Sorry, the word was {answer.upper()}.\n')
+            print(f'\nSorry, the word was {answer.upper()}.\n')
             return()
 
 def getInput(message):
