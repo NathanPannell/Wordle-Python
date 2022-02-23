@@ -1,6 +1,5 @@
 import random
 
-# testing commits
 # Number of allowed guesses
 MAX_TRIES = 6
 
